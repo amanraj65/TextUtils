@@ -7,7 +7,7 @@ function App() {
     <>
     <Navbar title= "TextUtils"/>
     <div className="container">
-    <TextForms input1= "phone no" btntext = "submit"/>
+    <TextForms input1= "Enter text" btntext = "Convert to uppercase"/>
       
     </div>
     </>
