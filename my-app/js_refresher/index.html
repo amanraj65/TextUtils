@@ -11,6 +11,31 @@
         console.log(a);
         document.addEventListener("click", myfunc = () => confirm("clicked"));
     </script>
+
+
+  <div id="chart_div"></div>
+  <a style="font-size:12px;color:#BDBDBD" href="https://livechatai.com/">Powered by LiveChatAI</a>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+google.charts.load('current', {'packages':['table']});
+  google.charts.setOnLoadCallback(drawTable);
+
+  function drawTable() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Encryption Method');
+    data.addColumn('string', 'Security Level');
+    data.addColumn('boolean', 'Recommended');
+    data.addRows([
+      ['WEP', 'Low', false],
+      ['WPA', 'Medium', false],
+      ['WPA2', 'High', true],
+      ['WPA3', 'Very High', true]
+    ]);
+
+    var table = new google.visualization.Table(document.getElementById('chart_div'));
+
+    table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+  }</script>
     <p>I am learning JS</p>
 </body>
 </html>
